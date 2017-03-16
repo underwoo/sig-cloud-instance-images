@@ -8,6 +8,7 @@ RUN ["yum", "-y", "install", "php"]
 RUN ["yum", "clean", "all"]
 
 COPY 10-php.conf /etc/httpd/conf.modules.d/
+COPY 00-alias.conf /etc/httpd/conf.modules.d/
 
 EXPOSE 80 443
 
